@@ -1,0 +1,7 @@
+<resources>
+    <string name="top_splashscreen">Top Splashscreen</string>
+    <string name="bottom_splashscreen">Bottom Splash screen</string>
+    <string name="logo_app">Logo App Splashscreen\n</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

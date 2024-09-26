@@ -10,16 +10,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AFApartmentApp"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".home.MainActivity"
+            android:name=".splashscreen.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".splashscreen.onboarding.OnBoardingActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".home.MainActivity"
+            android:exported="false">
         </activity>
         <activity
             android:name=".auth.LoginActivity"

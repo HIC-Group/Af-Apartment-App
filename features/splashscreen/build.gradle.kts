@@ -1,20 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
 android {
-    namespace = "com.afapartment"
+    namespace = "com.afapartment.splashscreen"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.afapartment"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -41,14 +38,10 @@ android {
 dependencies {
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    
+
     implementation(project(":core:data"))
     implementation(project(":core:domain"))
     implementation(project(":core:ui"))
-
-    implementation(project(":features:auth"))
-    implementation(project(":features:home"))
-    implementation(project(":features:splashscreen"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -59,6 +52,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    //di
-    implementation(libs.koin.android)
+    //dots indicator
+    implementation(libs.dots.indicator)
 }
