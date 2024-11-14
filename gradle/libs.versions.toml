@@ -20,6 +20,7 @@ navigationRuntimeKtx = "2.8.3"
 
 #koin
 koin = "4.0.0"
+animationCoreAndroid = "1.7.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -48,6 +49,7 @@ androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navig
 
 #koin
 koin = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+androidx-animation-core-android = { group = "androidx.compose.animation", name = "animation-core-android", version.ref = "animationCoreAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

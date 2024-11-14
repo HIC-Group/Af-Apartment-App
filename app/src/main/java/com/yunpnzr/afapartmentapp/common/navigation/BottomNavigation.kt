@@ -6,10 +6,10 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
-import com.yunpnzr.afapartmentapp.presentation.history.HistoryScreen
-import com.yunpnzr.afapartmentapp.presentation.home.HomeScreen
-import com.yunpnzr.afapartmentapp.presentation.message.MessagesScreen
-import com.yunpnzr.afapartmentapp.presentation.profile.ProfileScreen
+import com.yunpnzr.afapartmentapp.presentation.main.history.HistoryScreen
+import com.yunpnzr.afapartmentapp.presentation.main.home.HomeScreen
+import com.yunpnzr.afapartmentapp.presentation.main.message.MessagesScreen
+import com.yunpnzr.afapartmentapp.presentation.main.profile.ProfileScreen
 
 @Composable
 fun BottomNavigation(

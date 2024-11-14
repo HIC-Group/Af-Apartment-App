@@ -2,14 +2,13 @@ package com.yunpnzr.afapartmentapp.common.screen
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.yunpnzr.afapartmentapp.presentation.auth.forgetpassword.ForgetPasswordScreen
 import com.yunpnzr.afapartmentapp.presentation.auth.login.LoginScreen
 import com.yunpnzr.afapartmentapp.presentation.auth.register.RegisterScreen
-import com.yunpnzr.afapartmentapp.presentation.home.HomeScreen
+import com.yunpnzr.afapartmentapp.presentation.main.MainScreen
 
 @Composable
 fun AppNavigation(
@@ -31,8 +30,10 @@ fun AppNavigation(
         composable(AppScreen.ForgetPassword.route) {
             ForgetPasswordScreen(modifier, navController)
         }
-        /*composable(AppScreen.Home.route) {
-            HomeScreen(navController)
-        }*/
+
+        composable(AppScreen.Main.route) {
+            MainScreen(modifier, navigationActions)
+        }
+
     }
 }

@@ -222,7 +222,11 @@ fun LoginInputScreen(
             shape = RoundedCornerShape(16.dp),
             colors = ButtonDefaults.buttonColors(MaterialTheme.colorScheme.secondary),
             onClick = {
-
+                navController.navigate(AppScreen.Main.route){
+                    popUpTo(AppScreen.Login.route){
+                        inclusive = true
+                    }
+                }
             }
         ) {
             Text(

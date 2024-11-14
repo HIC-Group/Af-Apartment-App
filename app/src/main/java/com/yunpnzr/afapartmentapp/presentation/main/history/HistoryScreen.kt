@@ -1,4 +1,4 @@
-package com.yunpnzr.afapartmentapp.presentation.history
+package com.yunpnzr.afapartmentapp.presentation.main.history
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier

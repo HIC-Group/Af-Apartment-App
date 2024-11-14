@@ -1,4 +1,4 @@
-package com.yunpnzr.afapartmentapp.presentation.main
+package com.yunpnzr.afapartmentapp.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

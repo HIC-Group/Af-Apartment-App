@@ -1,4 +1,4 @@
-package com.yunpnzr.afapartmentapp.presentation.message
+package com.yunpnzr.afapartmentapp.presentation.main.message
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
