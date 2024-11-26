@@ -18,6 +18,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.yunpnzr.afapartmentapp.common.screen.AppNavigation
 import com.yunpnzr.afapartmentapp.common.ui.theme.AppTheme
+import com.yunpnzr.afapartmentapp.utils.StatusBarColors
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +28,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SetBarColors()
+                    StatusBarColors()
                     /*Greeting(
                         name = "android",
                         modifier = Modifier.padding(innerPadding)
@@ -42,36 +43,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-//for change text status bar (if you want)
-@Composable
-fun SetBarColors() {
-    val systemUiController = rememberSystemUiController()
-    val useDarkIcons = !isSystemInDarkTheme()
-    val statusBarLight = MaterialTheme.colorScheme.primary
-    val statusBarDark = MaterialTheme.colorScheme.primary
-
-    DisposableEffect(systemUiController, useDarkIcons) {
-        systemUiController.setStatusBarColor(
-            color = if (useDarkIcons) statusBarLight else statusBarDark,
-            darkIcons = if (useDarkIcons) false else false
-        )
-        onDispose { }
-    }
-}
-
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     AppTheme {
-        Greeting("android")
+
     }
 }
